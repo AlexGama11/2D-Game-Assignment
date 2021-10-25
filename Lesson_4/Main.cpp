@@ -35,7 +35,6 @@ int main()
 			std::cout << "Invalid Input" << std::endl;
 		}
 	}
-	/*int MenuLoader;*/
 	return 0;
 }
 
