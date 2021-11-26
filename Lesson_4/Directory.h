@@ -2,9 +2,7 @@
 enum class MainMenu
 {
 	Play,
-	Options,
-	Help,
-	Quit
+	BackToMain
 };
 
 enum class Calculator
@@ -19,6 +17,10 @@ enum class Calculator
 
 int CalculatorCTRL();
 
-int TicTacToe();
+int Game();
 
-int MenuCTRL();
+int Help();
+
+int Options();
+
+int mainGame();
