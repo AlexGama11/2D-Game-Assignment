@@ -26,10 +26,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Menu.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Calculator.h">
+    <ClInclude Include="Directory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

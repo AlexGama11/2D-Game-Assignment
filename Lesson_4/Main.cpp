@@ -1,7 +1,6 @@
 ﻿#include <iostream>
 #include <string>
-#include "Menu.h"
-#include "Calculator.h"
+#include "Directory.h"
 
 
 int main()
@@ -17,7 +16,8 @@ int main()
 
 		if (answer0 == "Game" || answer0 == "game" || answer0 == "g" || answer0 == "G")
 		{
-			int MenuLoader = MenuCTRL();
+			/*int MenuLoader = MenuCTRL();*/
+			int MenuLoader = TicTacToe();
 		}
 
 		else if (answer0 == "Calculate" || answer0 == "calculate" || answer0 == "c" || answer0 == "C")
@@ -29,6 +29,7 @@ int main()
 		{
 			MenuisRunning = false;
 		}
+
 
 		else
 		{
