@@ -1,4 +1,5 @@
 #pragma once
+
 enum class MainMenu
 {
 	Play,
@@ -20,7 +21,5 @@ int CalculatorCTRL();
 int Game();
 
 int Help();
-
-int Options();
 
 int mainGame();

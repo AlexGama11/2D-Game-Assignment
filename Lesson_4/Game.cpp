@@ -13,14 +13,18 @@ int Game()
 	while (GameisRunning)
 	{
 		int menuOption = (int)MainMenu::Play;
-		std::cout << "What do you wish to do?[Play (0) or go back to main menu (1) }";
+		std::cout << "--------------------------------------------------------------" << std::endl;
+		std::cout << "|What do you wish to do?[Play (0) or go back to main menu (1)|" << std::endl;
+		std::cout << "--------------------------------------------------------------" << std::endl;
 		std::cin >> menuOption;
 		std::cin.get();
 
 		//if the answer fails, it clears cin and tells the player to put a number between 0 and 3.
 		while (std::cin.fail())
 		{
-			std::cout << "Please input a number between 0 and 3" << std::endl;
+			std::cout << "-----------------------------" << std::endl;
+			std::cout << "|Please input either 0 or 1!|" << std::endl;
+			std::cout << "-----------------------------" << std::endl;
 			std::cin.clear();
 			std::cin.ignore(256, '\n');
 			std::cin >> menuOption;
@@ -40,7 +44,9 @@ int Game()
 		case MainMenu::BackToMain:
 		{
 			std::string answer2;
-			std::cout << "Do you wish to return to the initial menu? Yes or No " << std::endl;
+			std::cout << "--------------------------------------------------" << std::endl;
+			std::cout << "|Do you wish to return to the initial menu? (y/n)|" << std::endl;
+			std::cout << "--------------------------------------------------" << std::endl;
 			std::getline(std::cin, answer2);
 
 			if (answer2 == "Yes" || answer2 == "yes" || answer2 == "y" || answer2 == "Y")
@@ -51,14 +57,18 @@ int Game()
 
 			else if (answer2 == "No" || answer2 == "no" || answer2 == "n" || answer2 == "N")
 			{
-				std::cout << "You've chosen to return to the main menu" << std::endl;
+				std::cout << "------------------------------------------" << std::endl;
+				std::cout << "|You've chosen to return to the main menu|" << std::endl;
+				std::cout << "------------------------------------------" << std::endl;
 				break;
 			}
 		}
 
 		default:
 		{
-			std::cout << "That input is invalid!" << std::endl;
+			std::cout << "------------------------" << std::endl;
+			std::cout << "|That input is invalid!|" << std::endl;
+			std::cout << "------------------------" << std::endl;
 			break;
 		}
 		}

@@ -11,6 +11,19 @@ const char EMPTY = ' ';
 const char TIE = 'T';
 const char NO_ONE = 'N';
 
+void tutorial();
+int askNumber(std::string question, int high, int low = 0);
+char playerChar();
+char pcChar(char playerChar);
+void displayBoard(const std::vector<char>& board);
+char winner(const std::vector<char>& board);
+int playerMove(const std::vector<char>& board, char player);
+int pcMove(std::vector<char> board, char pc);
+void announceWinner(char winner, char pc, char player);
+
+
+
+
 int mainGame()
 {
 	int move;
@@ -62,6 +75,22 @@ void tutorial()
 	std::cout << "Good luck and have fun!" << std::endl;
 }
 
+int askYesNo(std::string question)
+{
+	char answer;
+	do
+	{
+		std::cout << question << " (y/n):";
+		std::cin >> answer;
+		std::cin.get();
+	}
+
+	while (answer != 'y' && answer != 'n');
+	{
+		return answer;
+	}
+}
+
 int askNumber(std::string question, int high, int low)
 {
 	int number;
@@ -69,6 +98,7 @@ int askNumber(std::string question, int high, int low)
 	{
 		std::cout << question << "(" << low << "-" << high << "):";
 		std::cin >> number;
+		std::cin.get();
 	}
 
 	while (number > high || number < low);
@@ -79,27 +109,18 @@ int askNumber(std::string question, int high, int low)
 
 char playerChar()
 {
-	std::string answer;
-	std::cout << "Do you wish to go first?";
-	std::cin.get();
-
-	if (answer == "Yes" || answer == "yes" || answer == "y" || answer == "Y")
+	char first_move = askYesNo("Do you wish to go first?");
+	if (first_move == 'y')
 	{
 		std::cout << "You'll have the first move." << std::endl;
 		return X;
 	}
 
-	else if (answer == "No" || answer == "no" || answer == "n" || answer == "N")
+	else
 	{
 		std::cout << "You'll move last." << std::endl;
 		return O;
 	}
-
-	else
-	{
-		std::cout << "Invalid Input" << std::endl;
-	}
-
 }
 
 char pcChar(char Char)
@@ -168,12 +189,12 @@ inline bool isLegal(int move, const std::vector<char>& board)
 //for player movement
 int playerMove(const std::vector<char>& board, char player)
 {
-	int move = askNumber("What square do you choose?", 0, 8);
+	int move = askNumber("What square do you choose?", (board.size() - 1));
 	while (!isLegal(move, board))
 	{
 	//checks if move is legal
 		std::cout << "Choose a square that isn't occupied! You Cheater!" << std::endl;
-			move = askNumber("What square do you choose?", 0, 8);
+			move = askNumber("What square do you choose?", (board.size() - 1));
 	}
 
 	std::cout << "Well done!" << std::endl;
@@ -246,7 +267,8 @@ int pcMove(std::vector<char> board, char pc)
 		    }
 	}
 
-	std::cout << "pc chose square:" << move << std::endl;
+	std::cout << "PC chose square:" << move << std::endl;
+	return move;
 }
 
 void announceWinner(char winner, char pc, char player)
