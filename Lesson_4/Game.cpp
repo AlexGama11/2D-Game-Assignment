@@ -2,7 +2,7 @@
 #include <string>
 #include "Directory.h"
 
-
+// game menu
 int Game()
 {
 	MainMenu mainmenu = MainMenu::Play;

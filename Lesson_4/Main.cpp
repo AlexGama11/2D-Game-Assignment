@@ -2,12 +2,13 @@
 #include <string>
 #include "Directory.h"
 
-
+// main menu
 int main()
 {
 	bool MenuisRunning = true;
 	while (MenuisRunning)
 	{
+		//if/else statements because I prefer them here over Switch Case
 		std::string answer0;
 		std::cout << "--------------------------------------------------------------------------" << std::endl;
 		std::cout << "|Do you wish to play the game, to calculate, to ask for help, or to exit?|" << std::endl;
@@ -33,7 +34,6 @@ int main()
 		{
 			MenuisRunning = false;
 		}
-
 
 		else
 		{

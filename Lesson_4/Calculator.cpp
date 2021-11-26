@@ -2,7 +2,7 @@
 #include <string>
 #include "Directory.h"
 
-
+// Calculator
 int CalculatorCTRL()
 {
 			Calculator calculate = Calculator::Add;
@@ -30,6 +30,7 @@ int CalculatorCTRL()
 
 				switch (calculate)
 				{
+					// adds numbers
 				case Calculator::Add:
 				{
 					int num1 = 0;
@@ -68,6 +69,7 @@ int CalculatorCTRL()
 
 				}
 
+				// subtracts numbers
 				case Calculator::Subtract:
 				{
 					int num1 = 0;
@@ -105,6 +107,7 @@ int CalculatorCTRL()
 					break;
 				}
 
+				// multiplies numbers
 				case Calculator::Multiply:
 				{
 					int num1 = 0;
@@ -142,6 +145,7 @@ int CalculatorCTRL()
 					break;
 				}
 
+				// divides numbers
 				case Calculator::Divide:
 				{
 					int num1 = 0;
@@ -175,6 +179,7 @@ int CalculatorCTRL()
 						std::cin >> calculateoption;
 					}
 
+					// no dividing by 0
 					if (num2 == 0)
 					{
 						std::cout << "---------------------------------" << std::endl;
@@ -191,6 +196,7 @@ int CalculatorCTRL()
 					}
 				}
 
+				// gets the remainder of a division.
 				case Calculator::Remainder:
 				{
 					int num1 = 0;
@@ -224,6 +230,7 @@ int CalculatorCTRL()
 						std::cin >> calculateoption;
 					}
 
+					// no dividing by 0
 					if (num2 == 0)
 					{
 						std::cout << "----------------------------------" << std::endl;
@@ -238,7 +245,7 @@ int CalculatorCTRL()
 						break;
 					}
 				}
-
+				// returns to main
 				case Calculator::Return:
 				{
 					std::string answer3;

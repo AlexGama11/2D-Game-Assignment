@@ -11,6 +11,7 @@ const char EMPTY = ' ';
 const char TIE = 'T';
 const char NO_ONE = 'N';
 
+// calling functions
 void tutorial();
 int askNumber(std::string question, int high, int low = 0);
 char playerChar();
@@ -22,8 +23,7 @@ int pcMove(std::vector<char> board, char pc);
 void announceWinner(char winner, char pc, char player);
 
 
-
-
+// main TicTacToe function
 int playTTC()
 {
 	int move;
@@ -58,6 +58,7 @@ int playTTC()
 	return 0;
 }
 
+// teaches player how to play
 void tutorial()
 {
 	std::cout << "Welcome to Tic Tac Toe!!!" << std::endl;
@@ -75,6 +76,7 @@ void tutorial()
 	std::cout << "Good luck and have fun!" << std::endl;
 }
 
+// for the Yes/No question
 int askYesNo(std::string question)
 {
 	char answer;
@@ -91,6 +93,7 @@ int askYesNo(std::string question)
 	}
 }
 
+// For the numbers
 int askNumber(std::string question, int high, int low)
 {
 	int number;
@@ -107,6 +110,7 @@ int askNumber(std::string question, int high, int low)
 	}
 }
 
+// defines player's character
 char playerChar()
 {
 	char first_move = askYesNo("Do you wish to go first?");
@@ -123,6 +127,7 @@ char playerChar()
 	}
 }
 
+//defines enemy character
 char pcChar(char Char)
 {
 	if (Char == X)
@@ -136,6 +141,7 @@ char pcChar(char Char)
 	}
 }
 
+// defines the board
 void displayBoard(const std::vector<char>& board)
 {
 	std::cout << board[0] << " | " << board[1] << " | " << board[2]<< std::endl;
@@ -271,6 +277,7 @@ int pcMove(std::vector<char> board, char pc)
 	return move;
 }
 
+// announces the winner, previously tried to make a custom name in a separate cpp, but it failed (my Visual studio was problematic), kept default name
 void announceWinner(char winner, char pc, char player)
 {
 	if (winner == pc)

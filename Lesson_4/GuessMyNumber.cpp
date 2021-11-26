@@ -5,12 +5,14 @@
 
 int playGMN()
 {
+	// generates random numbers
 	srand(static_cast<unsigned int>(time(0)));
 	int guessNumber = rand() % 100 + 1;
 	int lives = 5;
 	int guess;
 	bool numberGuessed = false;
 
+	// has a lives mechanic, if lives reach 0 = death
 	std::cout << "Welcome to Guess My Number!!!" << std::endl;
 	std::cout << "You'll face the PC in this game" << std::endl;
 	while ((lives > 0) || (numberGuessed == false))

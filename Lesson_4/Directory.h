@@ -1,5 +1,8 @@
 #pragma once
 
+
+// my directory for functions in different cpp files
+
 enum class MainMenu
 {
 	Play,
