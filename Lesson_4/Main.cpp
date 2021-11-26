@@ -9,9 +9,9 @@ int main()
 	while (MenuisRunning)
 	{
 		std::string answer0;
-		std::cout << "---------------------------------------------------------------------------------------------" << std::endl;
+		std::cout << "--------------------------------------------------------------------------" << std::endl;
 		std::cout << "|Do you wish to play the game, to calculate, to ask for help, or to exit?|" << std::endl;
-		std::cout << "---------------------------------------------------------------------------------------------" << std::endl;
+		std::cout << "--------------------------------------------------------------------------" << std::endl;
 		std::getline(std::cin, answer0);
 
 		if (answer0 == "Game" || answer0 == "game" || answer0 == "g" || answer0 == "G")

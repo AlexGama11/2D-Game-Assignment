@@ -22,4 +22,6 @@ int Game();
 
 int Help();
 
-int mainGame();
+int playTTC();
+
+int playGMN();

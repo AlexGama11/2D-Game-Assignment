@@ -36,7 +36,23 @@ int Game()
 		{
 		case MainMenu::Play:
 		{
-			int PlayTTC = mainGame();
+			std::string GameChoice;
+			std::cout << "-----------------------------------------------------------" << std::endl;
+			std::cout << "|Do you wish to play TicTacToe (T) or Guess My Number (G)?|" << std::endl;
+			std::cout << "-----------------------------------------------------------" << std::endl;
+			std::cin >> GameChoice;
+			std::cin.get();
+
+
+			if (GameChoice == "TicTacToe" || GameChoice == "tictactoe" || GameChoice == "t" || GameChoice == "T")
+			{
+				int PlayTTC = playTTC();
+			}
+
+			if (GameChoice == "GuessMyNumber" || GameChoice == "guessmynumber" || GameChoice == "g" || GameChoice == "G")
+			{
+				int PlayGMN = playGMN();
+			}
 			break;
 		}
 

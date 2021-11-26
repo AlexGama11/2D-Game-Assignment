@@ -30,6 +30,9 @@
     <ClCompile Include="Help.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GuessMyNumber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Directory.h">

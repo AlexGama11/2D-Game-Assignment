@@ -24,7 +24,7 @@ void announceWinner(char winner, char pc, char player);
 
 
 
-int mainGame()
+int playTTC()
 {
 	int move;
 	const int BOARD_NUM = 9;
@@ -61,7 +61,7 @@ int mainGame()
 void tutorial()
 {
 	std::cout << "Welcome to Tic Tac Toe!!!" << std::endl;
-	std::cout << "You'll face the pc in this game" << std::endl;
+	std::cout << "You'll face the PC in this game" << std::endl;
 
 	std::cout << "Enter a number from 0 to 8 to move." << std::endl;
 	std::cout << "The number you input will dictate your position on the board" << std::endl;
