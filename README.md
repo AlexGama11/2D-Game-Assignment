@@ -20,6 +20,12 @@ Just a basic 2D C++ console game with TicTactoe and Guess my Number!
 
 ← `Directory.h`: Directory File, links every cpp function together.
 
+← `Generate.bat`: A batch file my friend [BetterDrgn](https://github.com/BttrDrgn) taught me to make, it allows you generate your own solution to avoid issues.
+
+← `Premake.lua`: Lua script to generate the solution.
+
+← `Premake.exe`: Exe file the lua script uses to generate the solution.
+
 ![Swords](https://i.ytimg.com/vi/tEMIyi8XzWU/maxresdefault.jpg) I like swords, might make next game about it.
 
 ## I built this with Visual Studio! Here are some of my profiles for you to visit!
