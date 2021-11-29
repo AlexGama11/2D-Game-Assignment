@@ -48,10 +48,6 @@ workspace "Lesson 4"
 		language "c++"
 		kind "consoleapp"
 		warnings "off"
-
-		pchheader "stdafx.hpp"
-		pchsource "src/stdafx.cpp"
-		forceincludes "stdafx.hpp"
 		
 		files {
 			".\\Lesson_4\\**",
